@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>游戏规则</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px auto;
+            max-width: 700px;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        #startGameBtn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 20px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #startGameBtn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function startGame() {
+            localStorage.removeItem('locations'); // 清除地点数据
+            localStorage.removeItem('timeLeft'); // 清除倒计时剩余时间
+            window.location.href = 'index.html'; // 跳转到游戏主页面
+        }
+    </script>
+</head>
+<body>
+    <h1>欢迎来到地理知识游戏！</h1>
+    <p>游戏规则如下：</p>
+    <ol>
+        <li>此游戏旨在测试你对世界各地地理位置的了解。</li>
+        <li>游戏总共包含多个问题，每个问题都关联一个特定的地理位置。</li>
+        <li>每个问题都在独立的页面上呈现，并且包括一个答题按钮。</li>
+        <li>如果你在10分钟内正确回答所有问题，游戏成功，否则游戏失败。</li>
+        <li>每答对一个问题，对应的地点就会在地图上标记。</li>
+    </ol>
+    <p>准备好了吗？点击下面的按钮开始游戏！</p>
+    <button id="startGameBtn" onclick="startGame()">开始游戏</button>
+</body>
+</html>
