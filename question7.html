@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        button {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #correctAnswer {
+            display: none;
+        }
+    </style>
+    <script src="question.js"></script>
+</head>
+<body>
+    <div class="question">Question 7: Which of the following works, authored by Nottingham's most famous former student, novelist D.H. Lawrence, was first published by Methuen & Co. in 1915?
+
+    </div>
+    <div id="correctAnswer" data-correct="B"></div>
+    <button onclick="submitAnswer('A', {lat: 52.9389975, lng: -1.1968476})">A) Sons and Lovers</button>
+    <button onclick="submitAnswer('B', {lat: 52.9389975, lng: -1.1968476})">B) The Rainbow</button>
+    <button onclick="submitAnswer('C', {lat: 52.9389975, lng: -1.1968476})">C) Women in Love</button>
+    <button onclick="submitAnswer('D', {lat: 52.9389975, lng: -1.1968476})">D) Lady Chatterley's Lover</button>
+</body>
+</html>
+
+
+
+
