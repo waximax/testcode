@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>游戏规则</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px auto;
+            max-width: 700px;
+            padding: 20px;
+            background-color: #e8f5e9; /* Light green background */
+        }
+        h1 {
+            color: #2e7d32; /* Darker green color for the heading */
+        }
+        p, ol, li {
+            color: #4c8c4a; /* Green text color for paragraphs and lists */
+        }
+        #startGameBtn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 20px;
+            color: white;
+            background-color: #4caf50; /* Green color for the button */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #startGameBtn:hover {
+            background-color: #087f23; /* Darker green color on hover */
+        }
+    </style>
+    <script>
+        function startGame() {
+            localStorage.removeItem('locations'); // 清除地点数据
+            localStorage.removeItem('timeLeft'); // 清除倒计时剩余时间
+            window.location.href = 'index.html'; // 跳转到游戏主页面
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Geography Knowledge Game!</h1>
+    <h2>Game Rules:</h2>
+    <p>Players must install App Artcodes on their smartphones. Nine links are provided in advance. Players find an artcode within the book that correspond to these links. By scanning an artcode and correctly answering the associated question, a location will be marked on the map. This continues until all seven questions are answered correctly and their locations marked, at which point the player hits the 'End Game' button to finish. The goal is to mark all seven locations on the map within 10 minutes to successfully complete the game.</p>
+
+    <h2>Game Details:</h2>
+    <ol>
+        <li>Players scan a start artcode which leads to an 'index.html' page containing the game rules. They scroll to the bottom and click 'Start Game'.</li>
+        <li>On the 'index.html' page, there's a map interface, 'Restart Game' button, 'End Game' button, and 'View Current Clue' button.</li>
+        <li>Map Interface: Each time a player clicks on a question link and answers correctly, that artcode location is marked on the map.</li>
+        <li>Restart Game Button: If there's an unexpected situation requiring a game reset, players can use this button to start over.</li>
+        <li>End Game Button: After following the process and answering the final question correctly, players can finish the game by pressing this button.</li>
+        <li>View Current Clue Button: After starting the game, players should immediately click this to receive the first clue link, which leads them to find a book based on the address in the clue.</li>
+    </ol>
+    <p>Tip: If the webpage is slow to load after clicking the 'View Current Clue' button, refresh the page for a quicker load.</p>
+    <button id="startGameBtn" onclick="startGame()">Start Game</button>
+</body>
+</html>
