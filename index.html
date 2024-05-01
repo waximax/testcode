@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Nottingham's Outstanding Graduates Shine: Exploring with Artcodes</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArWIcwvKtpwjfn8Ppc6vStaVqFMouxzp0"></script>
+    <script src="map.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #e8f5e9; /* Light green background */
+            color: #333; /* Darker text for better contrast */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #map {
+            width: 80%;
+            height: 400px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        #timer {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #2e7d32; /* Green color for the timer */
+        }
+        button {
+            padding: 12px 24px;
+            margin-top: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            background-color: #4caf50; /* General green background for buttons */
+            color: white; /* White text for readability */
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        #viewClueButton {
+            font-weight: bold; /* Make the font bolder */
+            background-color: #ffc107; /* Use a bright yellow for high visibility */
+        }
+        #viewClueButton:hover {
+            background-color: #ffeb3b; /* Lighter yellow on hover */
+        }
+        #gameStatus {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body onload="initGame()">
+    <h1>How Nottingham's Outstanding Graduates Shine: Exploring with Artcodes</h1>
+    <div id="map"></div>
+    <h2 id="timer">15:00</h2> <!-- Updated timer to 15 minutes -->
+    <p id="gameStatus"></p>
+    <button id="viewClueButton" onclick="viewClue()">View Current Clue</button>
+    <button onclick="resetGame()">Restart Game</button>
+    <button onclick="endGame()">End Game</button>
+    
+</body>
+</html>

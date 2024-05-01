@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Rules</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px auto;
+            max-width: 700px;
+            padding: 20px;
+            background-color: #e8f5e9; /* 浅绿色背景 */
+        }
+        h1, h2 {
+            color: #2e7d32; /* 较深的绿色用于标题 */
+        }
+        p, ol, li {
+            color: #4c8c4a; /* 文本和列表使用绿色 */
+        }
+        #startGameBtn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 20px;
+            color: white;
+            background-color: #4caf50; /* 按钮的绿色 */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #startGameBtn:hover {
+            background-color: #087f23; /* 鼠标悬停时的深绿色 */
+        }
+    </style>
+    <script>
+        function startGame() {
+            localStorage.clear(); // 清除所有localStorage数据，包括时间和位置
+            window.location.href = 'index.html'; // 跳转到游戏主页面
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Geography Knowledge Game!</h1>
+    <h2>Game Rules:</h2>
+    <p>The objective of this game is to enhance your knowledge about Nottingham's distinguished alumni through engaging questions related to their achievements and contributions. You have 15 minutes to complete all the challenges.</p>
+    <h2>How to Play:</h2>
+    <ol>
+        <li>Install the App: Players must install the "App Artcodes" on their smartphones.</li>
+        <li>Start the Game: Scan the start artcode to open the 'Game Start Page' displaying the game rules, then scroll to the bottom and click 'Start Game'.</li>
+        <li>Playing the Game: Use the 'View Current Clue' button to get the first clue which provides an address to find the next artcode in a book. Repeat this for all seven questions.</li>
+        <li>Buttons:
+            <ul>
+                <li>Restart Game: Resets the game if needed.</li>
+                <li>End Game: Finish the game after all questions are correctly answered and marked on the map.</li>
+            </ul>
+        </li>
+    </ol>
+    <p>Tip: If the webpage is slow to load after clicking 'View Current Clue', try refreshing the page for quicker access.</p>
+    <button id="startGameBtn" onclick="startGame()">Start Game</button>
+</body>
+</html>
